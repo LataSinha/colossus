@@ -1,3 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  /* text-align: left;
+  float: left; */
+}
+
+.sponsors {
+  background-color: #016b9e;
+  height: 500%;
+  block-size: 100%;
+}
+
+.about {
+  background-color: #046e97;
+  height: 500%;
+  block-size: 100%;
+}
+
+.events{
+  background-color: #046e97;
+  height: 500%;
+  block-size: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +60,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
