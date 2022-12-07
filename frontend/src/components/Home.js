@@ -3,10 +3,16 @@ import videoBg from '../assets/HomeBg.mp4'
 import logo from '../assets/colossus_logo.png'
 import Sponsors from './Sponsors'
 import About from './About'
+import Footer from './Footer'
 import Events from './Events'
+import {useNavigate} from 'react-router-dom'
 import Navbar from './Navbar'
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/events')
+  }
   return (
     <div className='main' style={{ backgroundColor: '#016b9e' }}>
       <div>
@@ -37,7 +43,7 @@ const Home = () => {
                   <a class="nav-link text-white" href="#sponsors" style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em' }}>Sponsors</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#events" style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em' }}>Events</a>
+                  <a class="nav-link text-white" onClick={handleClick} style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em',cursor:'pointer' }}>Events</a>
                 </li>
                 {/* <li class="nav-item">
             <a class="nav-link text-white" href="#">Contact</a>
@@ -54,8 +60,9 @@ const Home = () => {
       </div><div style={{ backgroundColor: '#016b9e' }}>
       <a name='sponsors'><Sponsors /></a>
       <a name='about'><About /></a>
-      <a name='events'><Events /></a>
+      {/* <a name='events'><Events /></a> */}
       </div>
+      <Footer />
     </div>
   )
 }
