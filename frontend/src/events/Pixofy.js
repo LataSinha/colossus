@@ -1,10 +1,15 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
+import { useNavigate } from 'react-router';
 import { Helmet } from "react-helmet";
 import colossusLogo from '../assets/colossus_logo.png'
 import pixofy from '../assets/PixofyPoster.jpeg'
 
 const Pixofy = () => {
+    const navigate = useNavigate()
+    const handleRegister = () =>{
+        navigate('/pixofyRegistration')
+    }
     return (
         <>
             <div style={{ backgroundColor: '#046e97' }}>
@@ -55,7 +60,7 @@ const Pixofy = () => {
                         </Grid>
                         <Grid item xs={6}>
                             <img src={pixofy} style={{ display: 'flex', justifyContent: 'center', width: '80%', margin: 'auto', marginTop: '5%' }} />
-                            <button className='register' type='submit' style={{marginTop:'45%'}}>Register</button>
+                            <button onClick= {handleRegister} className='register' type='submit' style={{marginTop:'45%'}}>Register</button>
                         </Grid>
                     </Grid>
                 </div>

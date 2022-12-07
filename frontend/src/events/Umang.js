@@ -1,10 +1,15 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Helmet } from "react-helmet";
+import { useNavigate } from 'react-router';
 import colossusLogo from '../assets/colossus_logo.png'
 import umang from '../assets/umangPoster.jpeg'
 
 const Umang = () => {
+    const navigate = useNavigate()
+    const handleRegister = () => {
+        navigate('/umangRegistration')
+    }
     return (
         <>
             <div style={{ backgroundColor: '#046e97' }}>

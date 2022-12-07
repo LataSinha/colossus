@@ -22,6 +22,18 @@ import CodeManiaRegistration from './registrationLinks/CodeManiaRegistration'
 import BiddersDateRegistration from './registrationLinks/BiddersDateRegistration';
 import PapyrusRegistration from './registrationLinks/PapyrusRegistration'
 import WebForcesRegistration from './registrationLinks/WebForcesRegistration'
+import SurSangam from './events/SurSangam'
+import Karaoke from './events/Karaoke'
+import BeatExplosion from './events/BeatExplosion'
+import RockTillYouDrop from './events/RockTillYouDrop'
+import ArtOfYours from './events/ArtOfYours';
+import Concentrica from './events/Concentrica';
+import ConcentricaRegistration from './registrationLinks/ConcentricsReg';
+import ArtOfYoursRegistration from './registrationLinks/ArtOfYoursReg';
+import PixofyReg from './registrationLinks/PixofyReg';
+import UmangReg from './registrationLinks/UmangReg';
+import RockTillTheDropReg from './registrationLinks/RockTillTheDropReg';
+import BeatExplosionReg from './registrationLinks/BeatExplosionReg';
 import './App.css';
 
 function App() {
@@ -38,7 +50,7 @@ function App() {
                 <Route exact path='/pixofy' element={<Pixofy />}/>
                 <Route exact path='/betfair' element={<BetFair />}/>
                 <Route exact path='/umang' element={<Umang />}/>
-                <Route exact path='/artyCrafty' element={<ArtyCrafty />}/>
+                {/* <Route exact path='/artyCrafty' element={<ArtyCrafty />}/> */}
                 <Route exact path='/pixelIt' element={<PixelIt />}/>
                 <Route exact path='/kavyanjali' element={<Kavyanjali />}/>
                 <Route exact path='/nostalgicRacing' element={<NostalgicRacing />}/>
@@ -50,6 +62,18 @@ function App() {
                 <Route exact path='/biddersDateRegistration' element={<BiddersDateRegistration />}/>
                 <Route exact path='/papyrusRegistration' element={<PapyrusRegistration/>}/>
                 <Route exact path='/webforcesRegistration' element={<WebForcesRegistration/>}/>
+                <Route exact path='/surSangam' element={<SurSangam/>}/>
+                <Route exact path='/karaoke' element={<Karaoke/>}/>
+                <Route exact path='/beatExplosion' element={<BeatExplosion/>}/>
+                <Route exact path='/rockTillYouDrop' element={<RockTillYouDrop/>}/>
+                <Route exact path='/artOfYours' element={<ArtOfYours/>}/>
+                <Route exact path='/concentrica' element={<Concentrica/>}/>
+                <Route exact path='/concentricaRegistration' element={<ConcentricaRegistration/>}/>
+                <Route exact path='/artOfYoursRegistration' element={<ArtOfYoursRegistration/>}/>
+                <Route exact path='/pixofyRegistration' element={<PixofyReg/>}/>
+                <Route exact path='/umangRegistration' element={<UmangReg/>}/>
+                <Route exact path='/rockTillTheDropRegistration' element={<RockTillTheDropReg/>}/>
+                <Route exact path='/beatExplosionRegistration' element={<BeatExplosionReg/>}/>
             </Routes>
     </Router>
   );
