@@ -6,8 +6,10 @@ import { Grid } from '@material-ui/core'
 import colossusLogo from '../assets/colossus_logo.png'
 
 const CodeMania = () => {
-
-
+    const navigate = useNavigate()
+    const handleRegistration = () => {
+        navigate('/codeManiaRegistration')
+    }
     return (
         <div style={{ backgroundColor: '#046e97' }}>
             <Helmet>
@@ -67,8 +69,8 @@ const CodeMania = () => {
                         </ul>
                     </Grid>
                     <Grid item xs={6}>
-                        <img src={codemaniaPoster} style={{ display: 'flex', justifyContent: 'center', width: '60%', margin: 'auto', marginTop: '5%' }} />
-                        <button className='register' type='submit'>Register</button>
+                        <img src={codemaniaPoster} style={{ display: 'flex', justifyContent: 'center', width: '70%', height:'40%',margin: 'auto', marginTop: '5%' }} />
+                        <button onClick={handleRegistration} className='register' type='submit' style={{marginTop:'93%'}}>Register</button>
                     </Grid>
                 </Grid>
             </div>

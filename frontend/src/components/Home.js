@@ -13,6 +13,9 @@ const Home = () => {
   const handleClick = () => {
     navigate('/events')
   }
+  const handleClick1 = () => {
+    navigate('/timeline')
+  }
   return (
     <div className='main' style={{ backgroundColor: '#016b9e' }}>
       <div>
@@ -41,6 +44,9 @@ const Home = () => {
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#sponsors" style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em' }}>Sponsors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" onClick={handleClick1} style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em' ,cursor:'pointer'}}>Timeline</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" onClick={handleClick} style={{ fontFamily: 'Gotham', fontWeight: 'bold', fontSize: '1.5em',cursor:'pointer' }}>Events</a>

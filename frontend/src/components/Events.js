@@ -29,6 +29,33 @@ const Events = () => {
   const handleQuiz = () => {
     navigate('/quizzieBuzzie')
   }
+  const handlePaperPresentation = () => {
+    navigate('/papyrus')
+  }
+  const handlePixofy = () => {
+    navigate('/pixofy')
+  }
+  const handleBetfair = () => {
+    navigate('/betfair')
+  }
+  const handleUmang = () => {
+    navigate('/umang')
+  }
+  const handleArtyCrafty = () => {
+    navigate('/artyCrafty')
+  }
+  const handlePixelIt = () => {
+    navigate('/pixelIt')
+  }
+  const handleKavyanjali = () => {
+    navigate('/kavyanjali')
+  }
+  const handleNostalgicRacing = () => {
+    navigate('/nostalgicRacing')
+  }
+  const handleRampage = () => {
+    navigate('/rampage')
+  }
   return (
     <div className='events'>
        <h4 style={{ fontFamily: 'Gotham', color: '#fff', display:'flex', fontSize: '3em',justifyContent:'center',fontWeight:'bold' }}>Technical Events</h4>
@@ -40,31 +67,31 @@ const Events = () => {
           <img className='img' onClick={handleWebd} src={webd} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-          <img className='img'onClick={handleQuiz} src={quiz} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+          <img className='img' onClick={handleQuiz} src={quiz} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
 
       </Grid>
       <Grid container>
         <Grid items xs={4}>
-          <img className='img' src={paperPresentation} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+          <img className='img' onClick={handlePaperPresentation} src={paperPresentation} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={lanGame} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handleNostalgicRacing} src={lanGame} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={lanGame2} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handleRampage} src={lanGame2} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
       </Grid>
-      <h4 style={{ fontFamily: 'Gotham', color: '#fff', display:'flex', fontSize: '3em',justifyContent:'center',fontWeight:'bold',transition:'transform .1s',cursor:'pointer' }}>Non-Technical Events</h4>
+      <h4 style={{ fontFamily: 'Gotham', color: '#fff', display:'flex', fontSize: '3em',justifyContent:'center',fontWeight:'bold',transition:'transform .1s',cursor:'pointer' }}>Cultural Events</h4>
       <Grid container>
         <Grid items xs={4}>
-        <img className='img' src={photography} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handlePixelIt} src={photography} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={photography2} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '100',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handlePixofy} src={photography2} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '100',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={poem} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handleKavyanjali} src={poem} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
        
       </Grid>
@@ -76,7 +103,7 @@ const Events = () => {
         <img className='img' src={groupDance} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={betfair} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+        <img className='img' onClick={handleBetfair} src={betfair} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         
       </Grid>
@@ -88,12 +115,12 @@ const Events = () => {
         <img className='img' src={karoke} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
         </Grid>
         <Grid items xs={4}>
-        <img className='img' src={fineArts} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s' }} />
+        <img className='img' onClick={handleArtyCrafty} src={fineArts} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s' }} />
         </Grid>
         <Grid container>
           <Grid item xs={4}></Grid>
           <Grid item xs={4}>
-          <img className='img' src={dramatics} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
+          <img className='img' onClick={handleUmang} src={dramatics} style={{ height: '80%', width: '80%', marginLeft: '10%', borderRadius: '15%',transition:'transform .1s',cursor:'pointer' }} />
           </Grid>
           <Grid item xs={4}></Grid>
         </Grid>
