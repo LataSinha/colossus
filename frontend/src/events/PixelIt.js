@@ -1,12 +1,15 @@
 import React from 'react'
 import graphicPoster from '../assets/graphicPoster.jpeg'
 import { Helmet } from "react-helmet";
+import { useNavigate } from 'react-router';
 import { Grid } from '@material-ui/core'
 import colossusLogo from '../assets/colossus_logo.png'
 
 const CodeMania = () => {
-
-
+    const navigate = useNavigate()
+    const handleRegister = () =>{
+        navigate('/pixelItRegistration')
+    }
     return (
         <div style={{ backgroundColor: '#046e97' }}>
             <Helmet>
@@ -50,7 +53,7 @@ const CodeMania = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <img src={graphicPoster} style={{ display: 'flex', justifyContent: 'center', width: '70%', height:'45%',margin: 'auto', marginTop: '5%' }} />
-                        <button className='register' type='submit' style={{marginTop:'65%'}}>Register</button>
+                        <button onClick={handleRegister} className='register' type='submit' style={{marginTop:'65%'}}>Register</button>
                     </Grid>
                 </Grid>
             </div>

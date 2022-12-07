@@ -34,6 +34,8 @@ import PixofyReg from './registrationLinks/PixofyReg';
 import UmangReg from './registrationLinks/UmangReg';
 import RockTillTheDropReg from './registrationLinks/RockTillTheDropReg';
 import BeatExplosionReg from './registrationLinks/BeatExplosionReg';
+import SurSangamRegistration from './registrationLinks/SurSangamRegistration';
+import PixelItReg from './registrationLinks/PixelItReg';
 import './App.css';
 
 function App() {
@@ -74,6 +76,8 @@ function App() {
                 <Route exact path='/umangRegistration' element={<UmangReg/>}/>
                 <Route exact path='/rockTillTheDropRegistration' element={<RockTillTheDropReg/>}/>
                 <Route exact path='/beatExplosionRegistration' element={<BeatExplosionReg/>}/>
+                <Route exact path='/surSangamRegistration' element={<SurSangamRegistration/>}/>
+                <Route exact path='/pixelItRegistration' element={<PixelItReg/>}/>
             </Routes>
     </Router>
   );

@@ -51,7 +51,7 @@ const CodeMania = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <img src={poster} style={{ display: 'flex', justifyContent: 'center', width: '70%', height:'45%',margin: 'auto', marginTop: '5%' }} />
-                        <button onClick={handleRegistration} className='register' type='submit' style={{marginTop:'50%'}}>Register</button>
+                        <button onClick={handleRegistration} className='register' type='submit' style={{marginTop:'40%'}}>Register</button>
                     </Grid>
                 </Grid>
             </div>
