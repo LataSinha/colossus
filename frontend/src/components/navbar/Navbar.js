@@ -2,16 +2,24 @@ import { useState } from "react";
 import "./navbar.css";
 import { useNavigate } from 'react-router';
 import logo from "./logo.png";
+import {NavLink,Link} from 'react-router-dom'
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const navigate = useNavigate()
-  const handleEvents = () => {
-    navigate('/events')
-  }
-  const handleTimeline = () => {
-    navigate('/timeline')
-  }
+  // const handleEvents = () => {
+  //   navigate('/events')
+  // }
+  // const handleTimeline = () => {
+  //   navigate('/timeline')
+  // }
+  // var linkStyle;
+  //   if (this.state.hover) {
+  //     linkStyle = {backgroundColor: 'red'}
+  //   } else {
+  //     linkStyle = {backgroundColor: 'blue'}
+  //   }
+  
 
   return (
     <nav className="navigation">
@@ -43,7 +51,7 @@ export default function Navbar() {
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }
       >
-        <ul>
+        <ul style={{ cursor: 'pointer', color: 'white', }} >
           <li>
             <a href="/">Home</a>
           </li>
@@ -54,23 +62,10 @@ export default function Navbar() {
             <a href="#about">About</a>
           </li>
           <li>
-            <a style={{
-              cursor: 'pointer',
-              display: 'block',
-              width: '100%',
-              color: 'white',
-              fontFamily: 'Gotham'
-            }} onClick={handleEvents}>Events</a>
+            <Link to='/events'>Events</Link>
           </li>{" "}
           <li>
-            <a className='aClass' style={{
-              cursor: 'pointer',
-              display: 'block',
-              width: '100%',
-              color: 'white',
-              fontFamily: 'Gotham',
-
-            }} onClick={handleTimeline}>Timeline</a>
+            <Link to='/timeline'>Timeline</Link>
           </li>{" "}
           {/* 
           TODO: Make it work
