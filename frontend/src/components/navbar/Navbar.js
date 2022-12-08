@@ -63,12 +63,13 @@ export default function Navbar() {
             }} onClick={handleEvents}>Events</a>
           </li>{" "}
           <li>
-            <a style={{
+            <a className='aClass' style={{
               cursor: 'pointer',
               display: 'block',
               width: '100%',
               color: 'white',
-              fontFamily: 'Gotham'
+              fontFamily: 'Gotham',
+
             }} onClick={handleTimeline}>Timeline</a>
           </li>{" "}
           {/* 
