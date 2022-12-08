@@ -30,38 +30,56 @@ video {
 }
 
 .sponsors {
-  background-color: #016b9e;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 12, 25, 1) 0%,
+    rgba(22, 111, 147, 1) 87%,
+    rgba(0, 212, 255, 1) 100%
+  );
   height: 500%;
+  padding: 2rem;
   block-size: 100%;
 }
 
 .about {
-  background-color: #046e97;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 12, 25, 1) 0%,
+    rgba(22, 111, 147, 1) 87%,
+    rgba(0, 212, 255, 1) 100%
+  );
   height: 500%;
   block-size: 100%;
+  padding: 2rem;
+}
+.contact {
+  background: black;
+  height: 500%;
+  block-size: 100%;
+  padding: 2rem;
+  vertical-align: top;
 }
 
-.events{
-  background-color: #046e97;
+.events {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 12, 25, 1) 0%,
+    rgba(22, 111, 147, 1) 87%,
+    rgba(0, 212, 255, 1) 100%
+  );
   height: 500%;
   block-size: 100%;
 }
 
 .img:hover {
-    
-  /* width: '200px', */ 
-  /* height: '200px', */ 
-  transform: scale(1.1)
+  /* width: '200px', */
+  /* height: '200px', */
+  transform: scale(1.1);
 }
 
-.footer {
-  background-color: #016b9e;;
-  vertical-align: top;
-}
-
-.register{
+.register {
   background: #191970;
-  padding:1% 22% 1% 10%;
+  padding: 1% 22% 1% 10%;
   /* border-color: #191970; */
   color: #fff;
   /* text-align: center; */
@@ -73,22 +91,21 @@ video {
   height: 5%;
   cursor: pointer;
   text-align: center;
-  margin-top:85%;
-  margin-left:45%;
+  margin-top: 85%;
+  margin-left: 45%;
   /* margin-bottom: 90%; */
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
