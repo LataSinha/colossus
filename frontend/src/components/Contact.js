@@ -106,12 +106,6 @@ const Contact = () => {
             </Link>
             <br />
             <br />
-            <Link to="/contact" className={classes.link}>
-              Contact Us
-            </Link>
-            <br />
-            <br />
-            {/* <Link to='/about' className={classes.link}>About Us</Link><br/> */}
           </Grid>
           <Grid item xs={4}>
             <h5 style={{ color: "#fff", fontSize: "bold", marginTop: "3%" }}>
