@@ -36,6 +36,8 @@ import RockTillTheDropReg from './registrationLinks/RockTillTheDropReg';
 import BeatExplosionReg from './registrationLinks/BeatExplosionReg';
 import SurSangamRegistration from './registrationLinks/SurSangamRegistration';
 import PixelItReg from './registrationLinks/PixelItReg';
+import NostalgicRacingReg from './registrationLinks/NostalgicRacingReg';
+import RampageReg from './registrationLinks/RampageReg';
 import './App.css';
 
 function App() {
@@ -78,6 +80,8 @@ function App() {
                 <Route exact path='/beatExplosionRegistration' element={<BeatExplosionReg/>}/>
                 <Route exact path='/surSangamRegistration' element={<SurSangamRegistration/>}/>
                 <Route exact path='/pixelItRegistration' element={<PixelItReg/>}/>
+                <Route exact path='/nostalgicRacingRegister' element={<NostalgicRacingReg/>}/>
+                <Route exact path='/codmRegister' element={<RampageReg/>}/>
             </Routes>
     </Router>
   );
