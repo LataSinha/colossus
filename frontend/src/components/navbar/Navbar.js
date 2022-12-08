@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./navbar.css";
-import {useNavigate} from 'react-router';
+import { useNavigate } from 'react-router';
 import logo from "./logo.png";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const navigate = useNavigate()
-  const handleEvents = () =>{
+  const handleEvents = () => {
     navigate('/events')
   }
-  const handleTimeline = () =>{
+  const handleTimeline = () => {
     navigate('/timeline')
   }
 
@@ -54,10 +54,22 @@ export default function Navbar() {
             <a href="#about">About</a>
           </li>
           <li>
-            <a onClick={handleEvents}>Events</a>
+            <a style={{
+              cursor: 'pointer',
+              display: 'block',
+              width: '100%',
+              color: 'white',
+              fontFamily: 'Gotham'
+            }} onClick={handleEvents}>Events</a>
           </li>{" "}
           <li>
-            <a onClick={handleTimeline}>Timeline</a>
+            <a style={{
+              cursor: 'pointer',
+              display: 'block',
+              width: '100%',
+              color: 'white',
+              fontFamily: 'Gotham'
+            }} onClick={handleTimeline}>Timeline</a>
           </li>{" "}
           {/* 
           TODO: Make it work
