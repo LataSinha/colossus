@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import { useNavigate } from 'react-router';
-import logo from "./logo.png";
+import cdac from "./cdac.png";
 import {NavLink,Link} from 'react-router-dom'
 
 export default function Navbar() {
@@ -22,9 +22,9 @@ export default function Navbar() {
   
 
   return (
-    <nav className="navigation">
+    <nav className="navigation" style={{position:'fixed'}}>
       <a href="https://www.cdac.in/" className="brand">
-        <img src={logo} height="50px" />
+        <img src={cdac} height="50px" />
       </a>
       <button
         className="hamburger"
@@ -53,11 +53,11 @@ export default function Navbar() {
       >
         <ul style={{ cursor: 'pointer', color: 'white', }} >
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <a href="#sponsors">Sponsors</a>
-          </li>
+          </li> */}
           <li>
             <a href="#about">About</a>
           </li>

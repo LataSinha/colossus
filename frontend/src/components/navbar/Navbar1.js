@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from './cdac.png';
 import "./navbar.css";
 
 
@@ -6,9 +8,9 @@ export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
-    <nav className="navigation">
-      <a href="/" className="brand">
-        Colossus
+    <nav className="navigation" style={{position:'fixed'}}>
+      <a href="https://www.cdac.in/" className="brand">
+        <img src={logo} height="50px" />
       </a>
       <button
         className="hamburger"
@@ -30,6 +32,27 @@ export default function Navbar() {
           />
         </svg>
       </button>
+      <div
+        className={
+          isNavExpanded ? "navigation-menu1 expanded" : "navigation-menu1"
+        }
+      >
+        <ul style={{ cursor: 'pointer', color: 'white',marginRight:'50%',fontSize:'bold'}} >
+         
+          <li>
+            <Link to="/" style={{letterSpacing:'0.1rem'}}>Home</Link>
+          </li>
+          <li>
+            <Link to='/events'>Events</Link>
+          </li>{" "}
+          <li>
+            <Link to='/timeline'>Timeline</Link>
+          </li>{" "}
+          {/* 
+          TODO: Make it work
+           */}
+        </ul>
+      </div>
     </nav>
   );
 }

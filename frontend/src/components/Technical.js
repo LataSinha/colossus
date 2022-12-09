@@ -38,23 +38,21 @@ const Technical = () => {
     navigate("/rampage");
   };
   return (
-    <div className="events">
+    <>
+      <Helmet>
+                <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
+        </Helmet>
       <Navbar1 />
-      <h4
-        style={{
-          padding: "60px",
-          fontFamily: "Gotham",
-          color: "#fff",
-          display: "flex",
-          fontSize: "3em",
-          justifyContent: "center",
-          fontWeight: "bold",
-        }}
-      >
+      {/* <div className='webFont'> */}
+      <h4 className="webFont">
         Technical Events
       </h4>
+      <h6 className="webFont" style={{fontSize:'200%',color:'red'}}>
+       <i> Register Before 19 December 2022!</i>
+      </h6>
+      {/* </div> */}
       <Grid container>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             src={coding}
@@ -69,7 +67,7 @@ const Technical = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleWebd}
@@ -84,7 +82,7 @@ const Technical = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleQuiz}
@@ -101,7 +99,7 @@ const Technical = () => {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handlePaperPresentation}
@@ -116,7 +114,7 @@ const Technical = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleNostalgicRacing}
@@ -131,7 +129,7 @@ const Technical = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleRampage}
@@ -146,7 +144,7 @@ const Technical = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handlePixelIt}
@@ -162,7 +160,7 @@ const Technical = () => {
           />
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 };
 

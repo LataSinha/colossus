@@ -16,18 +16,11 @@ const About = () => {
           fontWeight: "bold",
         }}
       >
-        About Us
+        About
       </h4> 
       <Grid container>
         <Grid item xs={6}>
-          <p
-            style={{
-              marginLeft: "10%",
-              color: "#fff",
-              textAlign: "justify",
-              marginTop: "10%",
-            }}
-          >
+          <p className="aboutp">
             From a tech nerd to a cultural pundit, we have events for all! Get
             on your glasses or the costumes you want and participate in the
             universe of madness! Colossus’22 is back with exciting event and
@@ -38,12 +31,12 @@ const About = () => {
           </p>
         </Grid>
         <Grid item xs={6}>
-          <video
+          <video className="vid"
             src={video1}
-            width="auto"
-            height="10%"
+            // width="auto"
+            // height="10%"
             controls="controls"
-            style={{ marginLeft: "10%", height: "100%", width: "80%" }}
+            // style={{ marginLeft: "10%", height: "100%", width: "80%" }}
           />
         </Grid>
       </Grid>

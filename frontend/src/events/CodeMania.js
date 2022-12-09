@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 import { Grid } from "@material-ui/core";
 import colossusLogo from "../assets/colossus_logo.png";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const CodeMania = () => {
   const navigate = useNavigate();
@@ -11,78 +12,70 @@ const CodeMania = () => {
     navigate("/codeManiaRegistration");
   };
   return (
-    <div style={{ backgroundColor: "#046e97" }}>
-      <Helmet>
-        <style>{"body { background-color: #046e97; }"}</style>
+    <>
+    <Helmet>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
       </Helmet>
-      <div style={{ backgroundColor: "#046e97" }}>
-        {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-        <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
+      <Navbar1 />
+      <div>
         <Grid container>
-          <Grid item xs={6}>
-            <img
-              src={colossusLogo}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "90%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
-            <p
-              style={{
-                color: "#fff",
-                marginLeft: "26%",
-                fontFamily: "Gotham",
-                letterSpacing: ".2rem",
-                fontSize: "130%",
-              }}
-            >
+          <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+            <p className='ntp'>
               The Cosmic Fun Begins
             </p>
             <h1
               style={{
                 color: "#fff",
-                marginLeft: "20%",
+                // marginLeft: "102%",
                 fontFamily: "Gotham",
                 letterSpacing: ".2rem",
                 fontSize: "400%",
+                textAlign: 'center'
               }}
             >
               Code-Mania
             </h1>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src={codemaniaPoster}
+              className='poster'
+            /></Grid>
+          <Grid item xs={12} sm={6} md={6}>
             <br />
             <br />
-            <p style={{ color: "#fff", marginLeft: "8%" }}>
-              We are organizing a coding competition in our college fest for all
-              the coding geeks.
+            <p style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
+            <i>Programming is an art of algorithm design and the craft of debugging errant code
+            Good programmers write code that humans can understand. Colossus is back with Code-mania the coding contest for aspiring developers.</i>
             </p>
-            <p style={{ color: "#fff", marginLeft: "8%" }}>
+            <p style={{ color: "#fff",marginLeft: "10%",marginRight:'10%'  }}>
               The competition consists of two rounds and each round is an
               eliminatory round. The fastest and most accurate participant will
               be the winner of the contest.
             </p>
-            <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+            <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'  }}>
               Platform:&nbsp;HACKERRANK
             </h5>
-            <h4 style={{ color: "#fff", marginLeft: "8%" }}>ROUND 1</h4>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
+            <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>ROUND 1</h4>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'  }}>
               <li>60 minutes</li>
               <li>3 questions (EASY-MEDIUM LEVEL)</li>
             </ul>
-            <h4 style={{ color: "#fff", marginLeft: "8%" }}>ROUND 2</h4>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
+            <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'  }}>ROUND 2</h4>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               <li>60 minutes</li>
               <li>3 questions (MEDIUM-HARD LEVEL)</li>
               <li>
                 Our team will provide hints but some points will be deducted.
               </li>
             </ul>
-            <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+            <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               Rules and Regulations
             </h5>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               <li>Students can register as individuals (Entry Fee Rs. 50 ).</li>
               <li>
                 The candidate with a faster and maximum score will be a winner
@@ -117,36 +110,24 @@ const CodeMania = () => {
               <li>All Participants should have their college IDs with them.</li>
               <li>Organizers can change the rules anytime.</li>
             </ul>
-            <h5 style={{ color: "#fff", marginLeft: "8%" }}>For Enquiry</h5>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
+            <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'  }}>For Enquiry</h5>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               <li>Aman- 9560922385</li>
               <li>Akshat- 8860315039</li>
             </ul>
           </Grid>
-          <Grid item xs={6}>
-            <img
-              src={codemaniaPoster}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "70%",
-                height: "40%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
+          <Grid container>
             <button
               onClick={handleRegistration}
               className="register"
-              type="submit"
-              style={{ marginTop: "93%" }}
+              style={{ padding: '2rem 8rem 4rem 8rem' }}
             >
               Register
             </button>
           </Grid>
         </Grid>
       </div>
-    </div>
+    </>
   );
 };
 

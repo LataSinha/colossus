@@ -1,9 +1,10 @@
 import React from "react";
-import poster from "../assets/ArtOfYourPoster.jpg";
+import poster from "../assets/ArtOfYoursPoster.jpeg";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 import { Grid } from "@material-ui/core";
 import colossusLogo from "../assets/colossus_logo.png";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const ArtOfYours = () => {
   const navigate = useNavigate();
@@ -11,58 +12,52 @@ const ArtOfYours = () => {
     navigate("/artOfYoursRegistration");
   };
   return (
-    <div style={{ backgroundColor: "#046e97" }}>
+    <div>
       <Helmet>
-        <style>{"body { background-color: #046e97; }"}</style>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
       </Helmet>
-      <div style={{ backgroundColor: "#046e97" }}>
-        {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-        <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
+      
+      <div>
+      <Navbar1 />
         <Grid container>
-          <Grid item xs={6}>
-            <img
-              src={colossusLogo}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "90%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
-            <p
-              style={{
-                color: "#fff",
-                marginLeft: "26%",
-                fontFamily: "Gotham",
-                letterSpacing: ".2rem",
-                fontSize: "130%",
-              }}
-            >
+          <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+            <p className='ntp'>
               The Cosmic Fun Begins
             </p>
             <h1
               style={{
                 color: "#fff",
-                marginLeft: "20%",
+                // marginLeft: "102%",
                 fontFamily: "Gotham",
                 letterSpacing: ".2rem",
                 fontSize: "400%",
+                textAlign: 'center'
               }}
             >
-              Art Of Yours
+              Art of Yours
             </h1>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src={poster}
+              className='poster'
+            /></Grid>
+          <Grid item xs={12} sm={6} md={6}>
             <br />
             <br />
-            <p style={{ color: "#fff", marginLeft: "8%" }}>
+            <p style={{ color: "#fff",marginLeft: "10%",marginRight:'10%' }}>
               We are organizing a photography competition in our college fest
               'COLOSSUS'.
             </p>
-            <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+            <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'}}>
               Rules and Regulations
             </h5>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
-              <li>Any medium for painting is welcomed.</li>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
+            <li>Theme for the painting will be given on the spot.</li>
               <li>A3 Sheets will be provided at the venue.</li>
               <li>
                 You need to take care of your sheet as no extra sheets will be
@@ -72,7 +67,7 @@ const ArtOfYours = () => {
                 The art should be an original work. Plagiarism of any kind will
                 lead to immediate disqualification.
               </li>
-              <li>Theme for the painting will be given on the spot.</li>
+              
               <li>
                 The total duration for completion of the painting is 1 hour.
               </li>
@@ -92,33 +87,21 @@ const ArtOfYours = () => {
               <li>The Judges' decisions will be final</li>
               <li>Organizers can change the rule anytime.</li>
             </ul>
-            <h4 style={{ color: "#fff", marginLeft: "8%" }}>
+            <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               Entry Fee:&nbsp;₹ 50
             </h4>
-            <h5 style={{ color: "#fff", marginLeft: "8%" }}>For Enquiry</h5>
-            <ul style={{ color: "#fff", marginLeft: "8%" }}>
+            <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>For Enquiry</h5>
+            <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
               <li>Shivam Tiwari- +91-8604563049</li>
               <li>Ayush Verma- +91- 8287824607</li>
               <li>Somiya Bharadwaj- +91-8979175671</li>
             </ul>
           </Grid>
-          <Grid item xs={6}>
-            <img
-              src={poster}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "73%",
-                height: "58%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
+          <Grid container>
             <button
               onClick={handleRegistration}
               className="register"
-              type="submit"
-              style={{ marginTop: "42%" }}
+              style={{ padding: '2rem 8rem 4rem 8rem' }}
             >
               Register
             </button>

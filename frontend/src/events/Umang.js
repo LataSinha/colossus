@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 import colossusLogo from "../assets/colossus_logo.png";
 import umang from "../assets/umangPoster.jpg";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const Umang = () => {
   const navigate = useNavigate();
@@ -12,16 +13,42 @@ const Umang = () => {
   };
   return (
     <>
-      <div style={{ backgroundColor: "#046e97" }}>
-        <Helmet>
-          <style>{"body { background-color: #046e97; }"}</style>
+      <div>
+      <Helmet>
+                <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
         </Helmet>
-        <div style={{ backgroundColor: "#046e97" }}>
-          {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-   <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
+        <Navbar1 />
+        <div>
           <Grid container>
-            <Grid item xs={6}>
+            <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+              <p className='ntp'>
+                The Cosmic Fun Begins
+              </p>
+              <h1
+                style={{
+                  color: "#fff",
+                  // marginLeft: "102%",
+                  fontFamily: "Gotham",
+                  letterSpacing: ".2rem",
+                  fontSize: "400%",
+                  textAlign:'center'
+                }}
+              >
+                Umang
+              </h1> 
+            </Grid>
+          </Grid>
+
+          <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
               <img
+                src={umang}
+                className='poster'
+              />
+              </Grid>
+            <Grid item xs={12} sm={6} md={6}>
+              {/* <img
                 src={colossusLogo}
                 style={{
                   display: "flex",
@@ -37,7 +64,7 @@ const Umang = () => {
                   marginLeft: "26%",
                   fontFamily: "Gotham",
                   letterSpacing: ".2rem",
-                  fontSize: "130%",
+                  fontSize: "1100%",
                 }}
               >
                 The Cosmic Fun Begins
@@ -45,23 +72,24 @@ const Umang = () => {
               <h1
                 style={{
                   color: "#fff",
-                  marginLeft: "32%",
+                  marginLeft: "102%",
                   fontFamily: "Gotham",
                   letterSpacing: ".2rem",
                   fontSize: "400%",
                 }}
               >
                 Umang
-              </h1>
+              </h1> */}
               <br />
               <br />
-              <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%', }}>
                 Let's meet on the street to sing the geets!
               </h5>
               <p
                 style={{
                   color: "#fff",
-                  marginLeft: "8%",
+                  marginLeft: "10%",
+                  marginRight:'10%',
                   textAlign: "justify",
                 }}
               >
@@ -72,11 +100,11 @@ const Umang = () => {
                 performance to get the attention of the audience and deliver a
                 social message.
               </p>
-              <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 Rules and Regulations
               </h5>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
-                <li>Registration fees for the event is Rs.300.</li>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%', }}>
+                <li>Registration fees for the event is Rs.1000.</li>
                 <li>
                   The competition is open to all undergraduate and postgraduate
                   students.
@@ -109,7 +137,7 @@ const Umang = () => {
                     <ul>
                       <b>Prelims</b>
                       <li>
-                        Each team will get (7+3) minutes including set up &
+                        Each team will get (7+10) minutes including set up &
                         performance.
                       </li>
                     </ul>
@@ -124,32 +152,26 @@ const Umang = () => {
                   </ul>
                 </li>
               </ul>
-              <h5 style={{ color: "#fff", marginLeft: "8%" }}>For Enquiry</h5>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
-                <li>Tarun Chawla- 8860391578</li>
+              <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%', }}>For Enquiry</h5>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%', }}>
+                <li>Tarun Chawla- 88601091578</li>
                 <li>Ritik Singh- 9868084050</li>
               </ul>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                src={umang}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "80%",
-                  margin: "auto",
-                  marginTop: "5%",
-                }}
-              />
-              <button
+            
+            
+            </Grid>
+          {/* </Grid> */}
+          <Grid container>
+          <button
+               onClick = {handleRegister}
                 className="register"
                 type="submit"
-                style={{ marginTop: "75%" }}
+                // style={{ marginTop: "75%" }}
               >
                 Register
               </button>
             </Grid>
-          </Grid>
         </div>
       </div>
     </>

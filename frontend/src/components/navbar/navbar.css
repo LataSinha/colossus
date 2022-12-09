@@ -1,16 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 .navigation {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 9%;
   width: 100%;
   padding: 0.5rem 0rem;
   background-color: #04556a;
   color: black;
   /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
   z-index: 99;
+}
+
+@media screen 
+and (max-device-width : 511px)
+and (orientation: portrait) {
+  .main {
+    width: 100vw;
+    height: 2%;
+    margin:0;
+    padding:0;
+    /* min-width: 320px; */
+  /* max-width: 100%; */
+    /* background-color: red;
+    color: #fff; */
+  }
+}
+@media screen 
+and (max-device-width : 511px)
+and (min-device-width: 375px)
+and (orientation: portrait) {
+  .main {
+    width: 100vw;
+    height: 2%;
+    /* height: 5vh; */
+    margin:0;
+    padding:0;
+    /* min-width: 320px; */
+  /* max-width: 100%; */
+    /* background-color: red;
+    color: #fff; */
+  }
 }
 
 
@@ -55,11 +86,35 @@
 .navigation-menu li a:hover {
   color: black;
 }
-
-.navigation-menu li .aClass:hover {
-  color: black;
+.navigation-menu1 {
+  margin-left: auto;
 }
 
+
+.navigation-menu1 li {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-top: 10px;
+}
+.navigation-menu1 ul {
+  display: flex;
+  padding: 0;
+}
+.navigation-menu1 li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: "Gotham";
+  cursor: 'pointer';
+}
+.navigation-menu1 li a:hover {
+  color: black;
+}
+.navigation-menu1 li .aClass:hover {
+  color: black;
+}
 .hamburger {
   border: 0;
   height: 40px;
@@ -90,9 +145,11 @@
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: white;
+    width: 50%;
+    height: 50vh;
+    margin-left: 50vw;
+    background-color: #04556a;
+    color:#fff;
     border-top: 1px solid black;
     display: none;
   }
@@ -100,19 +157,65 @@
   .navigation-menu li {
     text-align: center;
     margin: 0;
+    color:#fff;
   }
 
   .navigation-menu li a {
     color: black;
     width: 100%;
     padding: 1.5rem 0;
+    color:#fff;
+    cursor:pointer;
   }
 
   .navigation-menu li:hover {
-    background-color: #eee;
+    color: #000;
   }
 
   .navigation-menu.expanded ul {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .hamburger {
+    display: block;
+    
+  }
+
+  .navigation-menu1 ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50%;
+    height: 30vh;
+    margin-left: 50vw;
+    background-color: #04556a;
+    color:#fff;
+    border-top: 1px solid black;
+    display: none;
+  }
+
+  .navigation-menu1 li {
+    text-align: center;
+    margin: 0;
+    cursor:pointer;
+  }
+
+  .navigation-menu1 li a {
+    color: #fff;
+    width: 100%;
+    padding: 1.5rem 0;
+    cursor: pointer;
+  }
+
+  .navigation-menu1 li:hover {
+    color: #000;
+  }
+
+  .navigation-menu1.expanded ul {
     display: block;
   }
 }

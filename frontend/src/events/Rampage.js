@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 import colossusLogo from "../assets/colossus_logo.png";
 import rampage from "../assets/RampagePoster.png";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const Pixofy = () => {
   const navigate = useNavigate();
@@ -12,47 +13,38 @@ const Pixofy = () => {
   };
   return (
     <>
-      <div style={{ backgroundColor: "#046e97" }}>
-        <Helmet>
-          <style>{"body { background-color: #046e97; }"}</style>
-        </Helmet>
-        <div style={{ backgroundColor: "#046e97" }}>
-          {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-   <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
-          <Grid container>
-            <Grid item xs={6}>
-              <img
-                src={colossusLogo}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "90%",
-                  margin: "auto",
-                  marginTop: "5%",
-                }}
-              />
-              <p
-                style={{
-                  color: "#fff",
-                  marginLeft: "26%",
-                  fontFamily: "Gotham",
-                  letterSpacing: ".2rem",
-                  fontSize: "130%",
-                }}
-              >
-                The Cosmic Fun Begins
-              </p>
-              <h1
-                style={{
-                  color: "#fff",
-                  marginLeft: "26%",
-                  fontFamily: "Gotham",
-                  letterSpacing: ".2rem",
-                  fontSize: "400%",
-                }}
-              >
-                Rampage
-              </h1>
+      <Helmet>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
+      </Helmet>
+      <Navbar1/>
+      <div>
+        <Grid container>
+          <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+            <p className='ntp'>
+              The Cosmic Fun Begins
+            </p>
+            <h1
+              style={{
+                color: "#fff",
+                // marginLeft: "102%",
+                fontFamily: "Gotham",
+                letterSpacing: ".2rem",
+                fontSize: "400%",
+                textAlign: 'center'
+              }}
+            >
+              Rampage
+            </h1>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src={rampage}
+              className='poster'
+            /></Grid>
+          <Grid item xs={12} sm={6} md={6}>
               <br />
               <br />
               <p style={{ color: "#fff", marginLeft: "8%" }}>
@@ -110,30 +102,17 @@ const Pixofy = () => {
                 <li>Rishabh Gupta- 9718459700</li>
               </ul>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                src={rampage}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "85%",
-                  height: "42%",
-                  margin: "auto",
-                  marginTop: "5%",
-                }}
-              />
+            <Grid container>
               <button
                 onClick={handleRegister}
                 className="register"
-                type="submit"
-                style={{ marginTop: "60%", marginLeft: "50%" }}
+                style={{ padding: '2rem 8rem 4rem 8rem' }}
               >
                 Register
               </button>
             </Grid>
           </Grid>
         </div>
-      </div>
     </>
   );
 };

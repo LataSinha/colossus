@@ -4,9 +4,15 @@ import Sponsors from "./Sponsors";
 import About from "./About";
 import Contact from "./Contact";
 import Navbar from "./navbar/Navbar";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
+    <>
+     <Helmet>
+                <style>{"body { background-color: #000; }"}</style>
+            </Helmet>
+    <Navbar />
     <div
       className="main"
       style={{
@@ -14,16 +20,17 @@ const Home = () => {
  
       }}
     >
-      <Navbar />
+     
       <video src={videoBg} autoPlay loop muted />
       <div>
-        <Sponsors />
-        <br />
+        {/* <Sponsors />
+        <br /> */}
         <About />
         <br />
         <Contact />
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
-import poster from "../assets/ConcentricaPoster.jpg";
+import poster from "../assets/concentricaPoster.jpeg";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router";
 import { Grid } from "@material-ui/core";
 import colossusLogo from "../assets/colossus_logo.png";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const Concentrica = () => {
   const navigate = useNavigate();
@@ -11,47 +12,40 @@ const Concentrica = () => {
     navigate("/concentricaRegistration");
   };
   return (
-    <div style={{ backgroundColor: "#046e97" }}>
+    <div>
       <Helmet>
-        <style>{"body { background-color: #046e97; }"}</style>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
       </Helmet>
-      <div style={{ backgroundColor: "#046e97" }}>
-        {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-        <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
+      <Navbar1 />
+      <div>
         <Grid container>
-          <Grid item xs={6}>
-            <img
-              src={colossusLogo}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "90%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
-            <p
-              style={{
-                color: "#fff",
-                marginLeft: "26%",
-                fontFamily: "Gotham",
-                letterSpacing: ".2rem",
-                fontSize: "130%",
-              }}
-            >
+          <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+            <p className='ntp'>
               The Cosmic Fun Begins
             </p>
             <h1
               style={{
                 color: "#fff",
-                marginLeft: "20%",
+                // marginLeft: "102%",
                 fontFamily: "Gotham",
                 letterSpacing: ".2rem",
                 fontSize: "400%",
+                textAlign: 'center'
               }}
             >
               Concentrica
             </h1>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src={poster}
+              className='poster'
+            /></Grid>
+          <Grid item xs={12} sm={6} md={6}>
             <br />
             <br />
             <p style={{ color: "#fff", marginLeft: "8%" }}>
@@ -62,7 +56,8 @@ const Concentrica = () => {
               Rules and Regulations
             </h5>
             <ul style={{ color: "#fff", marginLeft: "8%" }}>
-              <li>Any medium for painting is welcomed.</li>
+              <li>Mandala art is to be made</li>
+              <li>Only 2 colors are allowed in the mandala art.</li>
               <li>A3 Sheets will be provided at the venue.</li>
               <li>
                 You need to take care of your sheet as no extra sheets will be
@@ -72,9 +67,8 @@ const Concentrica = () => {
                 The art should be an original work. Plagiarism of any kind will
                 lead to immediate disqualification.
               </li>
-              <li>No more than 2 colors are allowed and time is 30minutes.</li>
               <li>
-                The total duration for completion of the painting is 1 hour.
+                The total duration for completion of the painting is 1:30 hour.
               </li>
               <li>
                 Make payment for your entry and post the screenshot of your
@@ -89,7 +83,6 @@ const Concentrica = () => {
                 topic, color mixing and usage, and how beautiful the painting
                 is.
               </li>
-              <li>The Judges' decisions will be final</li>
               <li>Organizers can change the rule anytime.</li>
             </ul>
             <h4 style={{ color: "#fff", marginLeft: "8%" }}>
@@ -102,23 +95,11 @@ const Concentrica = () => {
               <li>Somiya Bharadwaj- +91-8979175671</li>
             </ul>
           </Grid>
-          <Grid item xs={6}>
-            <img
-              src={poster}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "73%",
-                height: "58%",
-                margin: "auto",
-                marginTop: "5%",
-              }}
-            />
+          <Grid container>
             <button
               onClick={handleRegistration}
               className="register"
-              type="submit"
-              style={{ marginTop: "44%" }}
+              style={{ padding: '2rem 8rem 4rem 8rem' }}
             >
               Register
             </button>

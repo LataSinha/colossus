@@ -3,7 +3,8 @@ import { Grid } from "@material-ui/core";
 import { useNavigate } from "react-router";
 import { Helmet } from "react-helmet";
 import colossusLogo from "../assets/colossus_logo.png";
-import betfairPoster from "../assets/BiddersDate.png";
+import betfairPoster from "../assets/betfairPoster.png";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const BetFair = () => {
   const navigate = useNavigate();
@@ -12,57 +13,49 @@ const BetFair = () => {
   };
   return (
     <>
-      <div style={{ backgroundColor: "#046e97" }}>
-        <Helmet>
-          <style>{"body { background-color: #046e97; }"}</style>
-        </Helmet>
-        <div style={{ backgroundColor: "#046e97" }}>
-          {/* <h2 style={{color:'#fff',margin:'auto',fontFamily:'Gotham',fontSize:'3.5rem',textAlign:'center',letterSpacing:'0.3rem'}}>Code-Mania</h2>
-   <img src={codemaniaPoster} style={{display:'flex',justifyContent:'center',width:'20%',margin:'auto'}}/> */}
-          <Grid container>
-            <Grid item xs={6}>
-              <img
-                src={colossusLogo}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "90%",
-                  margin: "auto",
-                  marginTop: "5%",
-                }}
-              />
-              <p
-                style={{
-                  color: "#fff",
-                  marginLeft: "26%",
-                  fontFamily: "Gotham",
-                  letterSpacing: ".2rem",
-                  fontSize: "130%",
-                }}
-              >
-                The Cosmic Fun Begins
-              </p>
-              <h1
-                style={{
-                  color: "#fff",
-                  marginLeft: "19%",
-                  fontFamily: "Gotham",
-                  letterSpacing: ".2rem",
-                  fontSize: "400%",
-                }}
-              >
-                Bidder's Date
-              </h1>
+      <Helmet>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
+      </Helmet>
+      <Navbar1 />
+      <div>
+        <Grid container>
+          <Grid item xs={12}>
+            <h1 className='nth1'>COLOSSUS"22</h1>
+            <p className='ntp'>
+              The Cosmic Fun Begins
+            </p>
+            <h1
+              style={{
+                color: "#fff",
+                // marginLeft: "102%",
+                fontFamily: "Gotham",
+                letterSpacing: ".2rem",
+                fontSize: "400%",
+                textAlign: 'center'
+              }}
+            >
+              Bidder's Date
+            </h1>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src={betfairPoster}
+              className='poster'
+            /></Grid>
+          <Grid item xs={12} sm={6} md={6}>
               <br />
               <br />
-              <p style={{ color: "#fff", marginLeft: "8%" }}>
+              <p style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 We are organizing a Bet Fair in our college fest for all the
                 cricket lovers.
               </p>
-              <h4 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 ROUND 1: The Quiz
               </h4>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 <li>
                   The questions will be regarding International Cricket and IPL.
                 </li>
@@ -70,10 +63,10 @@ const BetFair = () => {
                   Top 5 highest scoring teams will make it to the next level.
                 </li>
               </ul>
-              <h4 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 ROUND 2: The Bidding
               </h4>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 <li>
                   Participation can be individual or in a team of 2 members.
                 </li>
@@ -93,10 +86,10 @@ const BetFair = () => {
                 </li>
                 <li>Each team has at most 5 overseas players.</li>
               </ul>
-              <h5 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 Rules and Regulations
               </h5>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'}}>
                 <li>
                   This competition is open to all undergraduates and
                   postgraduate student students (identity cards will be required
@@ -109,40 +102,26 @@ const BetFair = () => {
                 </li>
                 <li>The organizers can change the rules at any time.</li>
               </ul>
-              <h4 style={{ color: "#fff", marginLeft: "8%" }}>
+              <h4 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>
                 Entry Fee: :&nbsp;₹ 100 for each team
               </h4>
-              <h5 style={{ color: "#fff", marginLeft: "8%" }}>For Enquiry</h5>
-              <ul style={{ color: "#fff", marginLeft: "8%" }}>
-                <li>Pratham- 76784 00616</li>
-                <li>Himanshi- 9315216782</li>
+              <h5 style={{ color: "#fff", marginLeft: "10%",marginRight:'10%' }}>For Enquiry</h5>
+              <ul style={{ color: "#fff", marginLeft: "10%",marginRight:'10%'}}>
+                <li>Anand- 9165642584</li>
+                <li>Tarun- 8860391578</li>
               </ul>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                src={betfairPoster}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "80%",
-                  height: "45%",
-                  margin: "auto",
-                  marginTop: "5%",
-                }}
-              />
+            <Grid container>
               <button
-                onclick={handleBetFairReg}
-                className="register"
-                type="submit"
-                style={{ margin: "60%" }}
                 onClick={handleBetFairReg}
+                className="register"
+              style={{ padding: '2rem 8rem 4rem 8rem' }}
               >
                 Register
               </button>
             </Grid>
           </Grid>
         </div>
-      </div>
     </>
   );
 };

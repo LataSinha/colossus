@@ -1,15 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Navbar1 from "../components/navbar/Navbar1";
 
 const PixelIt = () => {
   return (
     <>
       <Helmet>
-        <style>{"body { background-color: #046e97; }"}</style>
+        <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
       </Helmet>
+      <Navbar1 />
       <div>
         <iframe
-          style={{ width: "100%", marginTop: "3%" }}
+          style={{ width: "100%", marginTop: "10%" }}
           src="https://docs.google.com/forms/d/e/1FAIpQLScwjE3fFaD8Xz9VtYf-7A6D-pll4SmhWBXnmXWMatZfI1KFnA/viewform?embedded=true"
           width="640"
           height="1477"

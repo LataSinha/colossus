@@ -12,6 +12,7 @@ import karoke from "../assets/Karoke.png";
 import photography2 from "../assets/Pixofy.png";
 import Navbar from "./navbar/Navbar1";
 import concentrica from "../assets/concentrica.png";
+import { Helmet } from "react-helmet"
 
 const NonTech = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const NonTech = () => {
     navigate("/umang");
   };
   const handleArtyCrafty = () => {
-    navigate("/artyCrafty");
+    navigate("/artOfYours");
   };
   const handlePixelIt = () => {
     navigate("/pixelIt");
@@ -50,25 +51,21 @@ const NonTech = () => {
     navigate("/rockTillYouDrop");
   };
   return (
-    <div className="events">
+    <div>
       <Navbar />
+      <Helmet>
+                <style>{"body { background: linear-gradient(90deg,rgba(0, 12, 25, 1) 0%,rgba(22, 111, 147, 1) 87%,rgba(0, 212, 255, 1) 100%);}"}</style>
+        </Helmet>
       <h4
-        style={{
-          padding: "60px",
-          fontFamily: "Gotham",
-          color: "#fff",
-          display: "flex",
-          fontSize: "3em",
-          justifyContent: "center",
-          fontWeight: "bold",
-          transition: "transform .1s",
-          cursor: "pointer",
-        }}
+        className="webFont"
       >
         Cultural Events
       </h4>
+      <h6 className="webFont" style={{fontSize:'200%',color:'red'}}>
+       <i> Register Before 19 December 2022!</i>
+      </h6>
       <Grid container>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleUmang}
@@ -83,7 +80,7 @@ const NonTech = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handlePixofy}
@@ -98,7 +95,7 @@ const NonTech = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleKavyanjali}
@@ -115,10 +112,11 @@ const NonTech = () => {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             src={soloDance}
+            onClick={handleRockTillYouDrop}
             style={{
               height: "80%",
               width: "80%",
@@ -126,13 +124,15 @@ const NonTech = () => {
               borderRadius: "15%",
               transition: "transform .1s",
               cursor: "pointer",
+              
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             src={groupDance}
+            onClick={handleBeatExplosion}
             style={{
               height: "80%",
               width: "80%",
@@ -143,7 +143,7 @@ const NonTech = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleBetfair}
@@ -160,10 +160,11 @@ const NonTech = () => {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             src={music}
+            onClick={handleSurSangam}
             style={{
               height: "80%",
               width: "80%",
@@ -174,10 +175,11 @@ const NonTech = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             src={karoke}
+            onClick = {handleKaraoke}
             style={{
               height: "80%",
               width: "80%",
@@ -188,7 +190,7 @@ const NonTech = () => {
             }}
           />
         </Grid>
-        <Grid items xs={4}>
+        <Grid items xs={12} sm={6} md={4}>
           <img
             className="img"
             onClick={handleArtyCrafty}
@@ -203,7 +205,7 @@ const NonTech = () => {
           />
         </Grid>
         <Grid container>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <img
               className="img"
               onClick={handleConcentrica}

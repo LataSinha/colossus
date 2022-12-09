@@ -5,7 +5,7 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import logo from "../assets/logo.png";
+
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -39,7 +39,7 @@ const Contact = () => {
       <div
         className="contact"
         id="contact"
-        style={{ color: "black", margin: "20px 0px", padding: "10px" }}
+       
       >
         <h4
           style={{
@@ -55,62 +55,64 @@ const Contact = () => {
         >
           Contact Us
         </h4>
-        <Grid container>
-          <Grid item xs={4}>
-            <img
-              src={logo}
-              style={{
-                marginTop: "-40%",
-                width: "20%",
-                height: "30%",
-                marginLeft: "40%",
-                borderRadius: "100%",
-                marginBottom: "5%",
-              }}
-              className="logo"
-            />
-            <br />
-            <Typography style={{ display: "flex" }}>
+        <Grid container style={{display:'flex',justifyContent:'center',textAlign:'center'}} >
+          <Grid item xs={4} >
+            <Typography style={{ display: "flex" ,color:'#fff'}}>
               <LocationOnIcon
-                style={{ color: "#fff", cursor: "pointer", marginLeft: "15%" }}
-                sx={{ fontSize: "40px" }}
+                // style={{ color: "#fff", cursor: "pointer", marginLeft: "15%" }}
+                // sx={{ fontSize: "40px" }}
               />
-              <h6 style={{ color: "#fff" }}>
+              <p 
+              // style={{ color: "#fff" }}
+              >
                 Centre for Development of Advanced Computing
-              </h6>
+              </p>
             </Typography>
-            <p style={{ color: "#fff", marginLeft: "17%" }}>
+            <p  
+            style={{ color: "#fff", marginLeft: "17%" }}
+            >
               {" "}
               B-30, Sector-62, Institution Area,{" "}
             </p>
-            <p style={{ color: "#fff", marginLeft: "17%" }}>Noida - 201307</p>
-            <p style={{ color: "#fff", marginLeft: "17%" }}>
+            <p 
+            style={{ color: "#fff", marginLeft: "17%" }}
+            >Noida - 201307</p>
+            <p 
+            style={{ color: "#fff", marginLeft: "17%" }}
+            >
               Uttar Pradesh (India)
             </p>
-            <p style={{ color: "#fff", marginLeft: "17%" }}>
+            <p 
+            style={{ color: "#fff", marginLeft: "17%" }}
+            >
               Phone: +91-120-2210800
             </p>
           </Grid>
-          <Grid item xs={4}>
-            <h5 style={{ color: "#fff", fontSize: "bold", marginTop: "3%" }}>
+          <Grid item xs={4} >
+            <h6 
+             style={{ color: "#fff", fontSize: "bold", marginLeft:'20%', marginTop: "3%" }}
+             >
               Useful Links
-            </h5>
+            </h6>
             <br />
-            <Link to="/" className={classes.link}>
+            <Link  to="/" className={classes.link} style={{ color: "#fff", marginLeft: "17%" }}>
               Home
             </Link>
             <br />
             <br />
-            <Link to="/events" className={classes.link}>
+            <Link  to="/events" className={classes.link} style={{ color: "#fff", marginLeft: "17%" }}>
               Events
             </Link>
             <br />
             <br />
+            <Link  to="/timeline" className={classes.link} style={{ color: "#fff", marginLeft: "17%" }}>
+              TimeLine
+            </Link>
           </Grid>
-          <Grid item xs={4}>
-            <h5 style={{ color: "#fff", fontSize: "bold", marginTop: "3%" }}>
+          <Grid item xs={4} className="contactp">
+            <h6>
               Follow Us
-            </h5>
+            </h6>
             <br />
             <Typography>
               <InstagramIcon
